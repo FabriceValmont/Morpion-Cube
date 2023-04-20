@@ -1,0 +1,23 @@
+#board {
+	border: 1px solid #E708FF;
+    
+}
+
+.cell, .cell1, .cell2, .cell3, .cell4, .cell5 {
+    box-sizing: border-box;
+	width: 65px;
+	height: 65px;
+	border: 3px solid #E708FF;
+	font-size: 25px;
+	text-align: center;
+	line-height: 60px;
+    
+}
+
+.cell:hover {
+background-color: orange;
+}
+
+
+
+

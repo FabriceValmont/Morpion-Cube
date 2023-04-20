@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="dist/menuStyle.css" rel="stylesheet">
+    <link rel="stylesheet" href="jeuStyle.css">
+    <title>Jeu du morpion</title>
+</head>
+<body class="bg-black bg-contain bg-no-repeat bg-center h-full w-full text-white" style="background-image: url(Image/grid_0.png);">
+
+    <h1 class="text-center text-[72px] font-sans font-bold ">Morpion-Cube</h1>
+
+    <div class="flex justify-center space-x-5" id="buttonReload">
+    <!-- <button id="startTimer">Lancer le timer</button> -->
+    <button class="border-4 border-[white] bg-white text-black hover:bg-black hover:text-white hover:border-[black]" id="reload"><a href="jeuPrincipal.html">Rejouer</a></button>
+    <button class="border-4 border-[white] bg-white text-black hover:bg-black hover:text-white hover:border-[black]" id="reloadMenu"><a href="menuPrincipal.html">Revenir au menu</a></button>
+    </div>
+    
+
+    <p class="flex justify-center text-[2rem]  " id="message"></p>
+    <p id="titleBoardPrincipale"></p>
+
+    
+
+    <div id="game1">
+
+        <div class="flex justify-center space-x-[20rem] text-[2rem]">
+        <p id="joueur1">Joueur 1 (X)</p>
+        <p id="joueur2">Joueur 2 (O)</p>
+        </div>
+
+        <div class="grid grid-rows-3 grid-cols-3 h-48 w-48 mr-auto ml-auto border-4 border-[#E708FF] bg-black opacity-75" id="board">
+            <div class= "cell1" ></div>
+            <div class= "cell1" ></div>
+            <div class= "cell1" ></div>
+            <div class= "cell1" ></div>
+            <div class= "cell1" ></div>
+            <div class= "cell1" ></div>
+            <div class= "cell1" ></div>
+            <div class= "cell1" ></div>
+            <div class= "cell1" ></div>
+        </div>
+    </div>
+
+    <div class="flex space-x-5 justify-center font-['Arial_Black'] text-black" id="buttonUp">
+        <div id = "arrowUpLeft">
+            <button class="border-4 border-[white] bg-white hover:bg-black hover:text-white hover:border-[black]" id="buttonUpLeft">Haut</button>
+        </div>
+        <div id = "arrowUpMiddle">
+            <button class="border-4 border-[white] bg-white hover:bg-black hover:text-white hover:border-[black]" id="buttonUpMiddle">Haut</button>
+        </div>
+        <div id = "arrowUpRight">
+            <button class="border-4 border-[white] bg-white hover:bg-black hover:text-white hover:border-[black]" id="buttonUpRight">Haut</button>
+        </div>
+    </div>
+
+    <div class="h-full w-[45rem] flex justify-center ml-auto mr-auto " id="game">
+
+       
+        <p id="timerPlayer1"></p>
+
+        <div id="game2">
+
+            <div class="grid grid-rows-3 grid-cols-3 h-48 w-48 border-4 border-[#E708FF] bg-black opacity-75" id="board">
+                <div class= "cell2" ></div>
+                <div class= "cell2" ></div>
+                <div class= "cell2" ></div>
+                <div class= "cell2" ></div>
+                <div class= "cell2" ></div>
+                <div class= "cell2" ></div>
+                <div class= "cell2" ></div>
+                <div class= "cell2" ></div>
+                <div class= "cell2" ></div>
+            </div>
+        </div>
+
+
+        <div class=" flex-wrap space-y-[48px] font-['Arial_Black'] text-black">
+            <div id = "arrowLeftUp">
+                <button class="border-4 border-[white] bg-white hover:bg-black hover:text-white hover:border-[black]" id="buttonLeftUp">Gauche</button>
+            </div>
+            <div id = "arrowLeftMiddle">
+                <button class="border-4 border-[white] bg-white hover:bg-black hover:text-white hover:border-[black]" id="buttonLeftMiddle">Gauche</button>
+            </div>
+            <div id = "arrowLeftDown">
+                <button class="border-4 border-[white] bg-white hover:bg-black hover:text-white hover:border-[black]" id="buttonLeftDown">Gauche</button>
+            </div>
+            
+        </div>
+
+
+        <div class="grid grid-rows-3 grid-cols-3 h-48 w-48 border-4 border-[#E708FF] bg-black opacity-75"  id="board">
+            <div class= "cell" ></div>
+            <div class= "cell" ></div>
+            <div class= "cell" ></div>
+            <div class= "cell" ></div>
+            <div class= "cell" ></div>
+            <div class= "cell" ></div>
+            <div class= "cell" ></div>
+            <div class= "cell" ></div>
+            <div class= "cell" ></div>
+        </div>
+
+        <div class=" flex-wrap space-y-[48px] font-['Arial_Black'] text-black">
+            <div id = "arrowRightUp">
+                <button class="border-4 border-[white] bg-white pl-1 pr-1 hover:bg-black hover:text-white hover:border-[black]" id="buttonRightUp">Droite</button>
+            </div>
+            <div id = "arrowRightMiddle">
+                <button class="border-4 border-[white] bg-white pl-1 pr-1 hover:bg-black hover:text-white hover:border-[black]" id="buttonRightMiddle">Droite</button>
+            </div>
+            <div id = "arrowRightDown">
+                <button class="border-4 border-[white] bg-white pl-1 pr-1 hover:bg-black hover:text-white hover:border-[black]" id="buttonRightDown">Droite</button>
+            </div>
+        </div>
+
+        <div class="grid grid-rows-3 grid-cols-3 h-48 w-48 border-4 border-[#E708FF] bg-black opacity-75"  id="board">
+            <div class= "cell4" ></div>
+            <div class= "cell4" ></div>
+            <div class= "cell4" ></div>
+            <div class= "cell4" ></div>
+            <div class= "cell4" ></div>
+            <div class= "cell4" ></div>
+            <div class= "cell4" ></div>
+            <div class= "cell4" ></div>
+            <div class= "cell4" ></div>
+        </div>
+    </div>
+
+        <p id="timerPlayer2"></p>
+    
+    </div>
+
+    <div class="flex space-x-7 justify-center font-['Arial_Black'] text-black" id="buttonDown">
+        <div id = "arrowDownLeft">
+            <button class="border-4 border-[white] bg-white hover:bg-black hover:text-white hover:border-[black]" id="buttonDownLeft">Bas</button>
+        </div>
+        <div id = "arrowDownMiddle">
+            <button class="border-4 border-[white] bg-white hover:bg-black hover:text-white hover:border-[black]" id="buttonDownMiddle">Bas</button>
+        </div>
+        <div id = "arrowDownRight">
+            <button class="border-4 border-[white] bg-white hover:bg-black hover:text-white hover:border-[black]" id="buttonDownRight">Bas</button>
+        </div>
+    </div>
+
+    
+
+    
+
+
+    <div id="game3">
+        <div class="grid grid-rows-3 grid-cols-3 h-48 w-48 mr-auto ml-auto border-4 border-[#E708FF] bg-black opacity-75"  id="board">
+            <div class= "cell5" ></div>
+            <div class= "cell5" ></div>
+            <div class= "cell5" ></div>
+            <div class= "cell5" ></div>
+            <div class= "cell5" ></div>
+            <div class= "cell5" ></div>
+            <div class= "cell5" ></div>
+            <div class= "cell5" ></div>
+            <div class= "cell5" ></div>
+        </div>
+    </div>
+
+    <p class="text-center text-[2rem] " id="titleBoardSecondary">Face arrière</p>
+
+    <div class="grid grid-rows-3 grid-cols-3 h-48 w-48 mr-auto ml-auto border-4 border-[#E708FF] bg-black opacity-75"  id="board">
+        <div class= "cell3" ></div>
+        <div class= "cell3" ></div>
+        <div class= "cell3" ></div>
+        <div class= "cell3" ></div>
+        <div class= "cell3" ></div>
+        <div class= "cell3" ></div>
+        <div class= "cell3" ></div>
+        <div class= "cell3" ></div>
+        <div class= "cell3" ></div>
+    </div>
+    
+    <script src="menuScript.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

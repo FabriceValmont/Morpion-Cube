@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/menuStyle.css" rel="stylesheet">
+    <title>Morpion Cube</title>
+</head>
+<body class=" w-full h-screen bg-no-repeat bg-contain bg-center text-center dark:bg-slate-900 pt-[4rem]"
+style="background-image: url(Image/Fond_menu_morpion.jpg);">
+
+<div>
+    <h1 class="text-[28px] sm:text-[72px] font-sans font-bold pt-10 sm:pt-0 sm:pb-[2rem] pb-5 text-[white] ">Morpion-Cube</h1>
+    
+    <div class="font-['Arial_Black'] flex-wrap space-y-5 text-[white] 
+    border-box h-48 w-48 mr-auto ml-auto" id="menu">
+        <div class="border-4 border-[#E708FF] hover:bg-[#E708FF]" id="list">
+            <a class="text-[20px] sm:text-[24px] " href="jeuPrincipal.html">
+                <button class="">Jouer</button></a>
+        </div>
+        <div class="border-4 border-[#E708FF] hover:bg-[#E708FF]" id="list">
+            <a class="text-[20px] sm:text-[24px]" href="#"><button>Multijoueur</button></a>
+        </div>
+        <div class="border-4 border-[#E708FF] hover:bg-[#E708FF]" id="list">
+            <a class="text-[20px] sm:text-[24px]" href="#"><button>Options</button></a>
+        </div>
+
+        
+    </div>
+
+    <div class="text-orange-600 font-['Arial'] border-box h-[24rem] sm:h-[16rem] w-[24rem] sm:w-[56rem] mr-auto ml-auto space-y-5 bg-white opacity-80 font-bold pt-5" id="ruleOfGame">
+        <p class="text-[20px] underline ">Règle du jeu</p>
+        <p>Il s'agit d'un jeu avec les règles du Morpion avec la particularité du Rubik's Cube.<br>
+            Pour gagner les joueurs doivent aligner trois symboles identiques sur une ligne horizontale, verticale ou diagonale sur la face principale du cube.</p>
+        <p>Le joueur à deux choix : placer un symbole ou tourner une des lignes du cube.<br>
+            Si toutes les faces du Cube sont remplies, les joueurs continuent à tourner les lignes jusqu'à avoir un vainqueur.</p>
+    </div>
+    
+</div>
+
+    <script src="menuScript.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
